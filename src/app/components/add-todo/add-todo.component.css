@@ -1,0 +1,26 @@
+
+/* ------------ add item ------------ */
+.add-to-do{
+  position: relative;
+  width: 480px;
+  height:4rem;
+  background-color: #FFF;
+  padding: 10px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+.add-to-do i{
+  position: absolute;
+  font-size: 40px;
+  color: #4162f6;
+}
+
+.add-to-do input{
+  position: absolute;
+  left: 50px;
+  height: 35px;
+  width: 420px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding-left:10px;
+}

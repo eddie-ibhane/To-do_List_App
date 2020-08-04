@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "todo-list-app"
+    }
+  },
+  "defaultProject": "todo-list-app",
+  "cli": {
+    "analytics": "315c666f-c4ca-4636-a15c-6ff5ec040893"
+  }
 }
