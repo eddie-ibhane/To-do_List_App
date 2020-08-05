@@ -18,9 +18,10 @@
   position: absolute;
   left: 50px;
   height: 35px;
-  width: 420px;
+  width: 410px;
   background-color: transparent;
-  border: none;
+  border: #ccc 1px solid;
+  border-radius: 5px;
   font-size: 20px;
   padding-left:10px;
 }

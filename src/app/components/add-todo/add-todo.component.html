@@ -1,4 +1,6 @@
 <div class="add-to-do">
-  <i class="fa fa-plus-circle"></i>
-  <input type="text" id="input" placeholder="Add a to-do" />
+  <form (ngSubmit)="onClick()">
+    <i (click)="onClick()" class="fa fa-plus-circle"></i>
+    <input type="text" name="description" [(ngModel)]="description" placeholder="Enter your Todo" />
+  </form>
 </div>

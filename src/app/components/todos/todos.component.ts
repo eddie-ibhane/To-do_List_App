@@ -7,11 +7,23 @@ import { TodoService } from './../../services/todo.service';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
-  todos:any = [];
-  constructor(private todoContent:TodoService) { }
+  todos
+
+  constructor(private todoLists:TodoService) { }
 
   ngOnInit(): void {
-    this.todos = this.todoContent.todoRecords()
+    this.todoLists.getTodos().subscribe((todo)=>{
+      this.todos = todo;
+    })
+  }
+
+  addItem(todo){
+    this.todoLists.saveTodo(todo).subscribe((todo)=> {
+      this.todos.push(todo);
+      console.warn('Result',todo);
+
+
+     })
   }
 
 }

@@ -1,18 +1,7 @@
+<app-add-todo (addItem)="addItem($event)"></app-add-todo>
+
 <div class="content">
-  <ul id="list">
-
-           <li class="item" *ngFor="let todo of todos">
-             <i class="fa fa-circle-thin co" job="complete" id="0"></i>
-              <p class="text">{{ todo.description }}</p>
-              <i class="fa fa-trash-o de" job="delete" id="0"></i>
-              <i class="fa fa-edit ed " job="edit" id="0"></i>
-          </li>
-          <!-- <li class="item">
-            <i class="fa fa-circle-thin co" job="complete" id="0"></i>
-             <p class="text">Drink Coffee</p>
-             <i class="fa fa-trash-o de" job="delete" id="0"></i>
-             <i class="fa fa-edit ed " job="edit" id="0"></i>
-         </li> -->
-
+  <ul id="list" *ngFor="let todo of todos">
+    <app-todo [todo]="todo"></app-todo>
   </ul>
 </div>
