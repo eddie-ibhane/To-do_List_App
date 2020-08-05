@@ -10,10 +10,6 @@ export class AddTodoComponent implements OnInit {
 
   @Output() addItem: EventEmitter<any> = new EventEmitter();
 
-  // addTodo = new FormGroup({
-  //   description: new FormControl('')
-  // })
-
   constructor(private todoService:TodoService) { }
 
   description:string;
@@ -29,9 +25,5 @@ export class AddTodoComponent implements OnInit {
     // console.warn(todo)
     this.addItem.emit(todo)
   }
-
-  // postTodo(todo){
-  //   this.todoService.saveTodo()
-  // }
 
 }

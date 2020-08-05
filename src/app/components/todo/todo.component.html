@@ -1,8 +1,8 @@
 <div class="item">
   <li >
-    <i (click)="onToggle()" class="fa fa-circle-thin co" job="complete" id="0"></i>
+    <i (click)="onToggle(todo)" class="fa fa-circle-thin co" job="complete" ></i>
      <p [ngClass]="setClass()" class="text">{{ todo.description }}</p>
-     <i (click)="onDelete()" class="fa fa-trash-o de" job="delete" id="0"></i>
-     <i class="fa fa-edit ed " job="edit" id="0"></i>
+     <i (click)="onDelete(todo)" class="fa fa-trash-o de" job="delete" ></i>
+     <i class="fa fa-edit ed " job="edit" ></i>
   </li>
 </div>

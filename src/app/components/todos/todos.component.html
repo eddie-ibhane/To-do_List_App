@@ -2,6 +2,7 @@
 
 <div class="content">
   <ul id="list" *ngFor="let todo of todos">
-    <app-todo [todo]="todo"></app-todo>
+    <app-todo [todo]="todo" (deleteTodo)="deleteTodo($event)"></app-todo>
+
   </ul>
 </div>

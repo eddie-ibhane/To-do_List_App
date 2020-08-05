@@ -7,23 +7,29 @@ import { TodoService } from './../../services/todo.service';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
-  todos
+  todos:any = [];
 
-  constructor(private todoLists:TodoService) { }
+  constructor(private todoService:TodoService) { }
 
   ngOnInit(): void {
-    this.todoLists.getTodos().subscribe((todo)=>{
+    this.todoService.getTodos().subscribe((todo)=>{
       this.todos = todo;
     })
   }
 
   addItem(todo){
-    this.todoLists.saveTodo(todo).subscribe((todo)=> {
+    this.todoService.saveTodo(todo).subscribe((todo)=> {
       this.todos.push(todo);
       console.warn('Result',todo);
-
-
      })
+  }
+
+  deleteTodo(todo){
+    //Remove todo from UI
+    this.todos = this.todos.filter(t => t.id !== todo.id );
+    console.warn(todo.id);
+    //Remove todo from server
+    this.todoService.deleteTodo(todo).subscribe();
   }
 
 }
