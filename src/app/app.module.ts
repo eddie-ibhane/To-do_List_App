@@ -12,6 +12,8 @@ import { TodosComponent } from './components/todos/todos.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { UpdateComponent } from './components/update/update.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AddTodoComponent } from './components/add-todo/add-todo.component';
     TodosComponent,
     TodoComponent,
     NavComponent,
-    AddTodoComponent
+    AddTodoComponent,
+    UpdateComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,43 @@
+/* ------------ header ------------ */
+.header{
+  max-width: 105%;
+  height:200px;
+  background-image: url('../../../assets/img/bg2.jpg');
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+  overflow: auto;
+
+}
+.clear{
+  width : 30px;
+  height: 30px;
+  position: absolute;
+  right:20px;
+  top: 20px;
+}
+.clear i{
+  font-size: 30px;
+  color: #FFF;
+}
+.clear i:hover{
+  cursor: pointer;
+  text-shadow: 1px 3px 5px #000;
+  transform: rotate(45deg);
+}
+.header h1{
+  position: absolute;
+  color: #FFF;
+  font-weight: bold;
+  margin: 2.5rem;
+
+}
+#date{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #FFF;
+  font-size: 25px;
+  font-family: 'Titillium Web', sans-serif;
+}

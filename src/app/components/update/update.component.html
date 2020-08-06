@@ -1,0 +1,9 @@
+<div class="container content">
+  <app-header></app-header>
+  <div class="add-to-do">
+    <form [formGroup]="updateInput" (ngSubmit)="onClick()">
+      <i (click)="onClick()" class="fa fa-plus-circle"></i>
+      <input type="text" name="description" formControlName="description"  placeholder="Enter your Todo" />
+    </form>
+  </div>
+</div>

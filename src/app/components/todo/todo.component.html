@@ -3,6 +3,6 @@
     <i (click)="onToggle(todo)" class="fa fa-circle-thin co" job="complete" ></i>
      <p [ngClass]="setClass()" class="text">{{ todo.description }}</p>
      <i (click)="onDelete(todo)" class="fa fa-trash-o de" job="delete" ></i>
-     <i class="fa fa-edit ed " job="edit" ></i>
+     <a routerLink="/update/{{ todo.id }}"><i class="fa fa-edit ed " job="edit" ></i></a>
   </li>
 </div>

@@ -1,5 +1,13 @@
 
-/* ------------ add item ------------ */
+/* ------------ Edit item ------------ */
+.content{
+  margin-top: 30px;
+  width:60rem;
+  height: 100vh;
+  max-height:100%;
+  overflow: auto;
+}
+
 .add-to-do{
   position: relative;
   width: 100%;
