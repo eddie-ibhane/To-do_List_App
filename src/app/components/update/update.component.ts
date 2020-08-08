@@ -1,6 +1,6 @@
 import { TodoService } from './../../services/todo.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -14,14 +14,15 @@ export class UpdateComponent implements OnInit {
   });
 
   constructor(
-    private router: ActivatedRoute,
-    private todoService: TodoService
+    private route: ActivatedRoute,
+    private todoService: TodoService,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
     // console.log(this.router.snapshot.params.id)
     this.todoService
-      .getCurrentParams(this.router.snapshot.params.id)
+      .getCurrentParams(this.route.snapshot.params.id)
       .subscribe((data) => {
         this.updateInput = new FormGroup({
           description: new FormControl(data['description']),
@@ -32,9 +33,10 @@ export class UpdateComponent implements OnInit {
 
   onClick() {
     this.todoService
-      .updateTodo(this.router.snapshot.params.id, this.updateInput.value)
+      .updateTodo(this.route.snapshot.params.id, this.updateInput.value)
       .subscribe((todo) => {
-        console.warn(todo);
-      });
+        console.warn('success',todo);
+        this.router.navigate(['/todos'])
+        });
   }
 }

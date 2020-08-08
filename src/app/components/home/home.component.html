@@ -1,0 +1,11 @@
+<app-nav (isLogout)="logout()"></app-nav>
+<div class="p-4">
+  <div class="container">
+      <h1>Hi {{user.email}}!</h1>
+      <p>You're logged in to Todo List App</p>
+      <hr>
+      <h2>What would you want to do TODAY?</h2>
+      <a routerLink="/todos"><h3>Create a To Do </h3></a>
+
+  </div>
+</div>
